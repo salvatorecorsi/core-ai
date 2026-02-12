@@ -1,69 +1,69 @@
 <?php
 
 add_action('rest_api_init', function () {
-    $namespace = 'core-ai/';
+    $namespace = 'core-ai';
 
-    register_rest_route($namespace, '/send', [
+    register_rest_route($namespace, 'send', [
         'methods'             => 'POST',
         'callback'            => 'ai_rest_send',
         'permission_callback' => 'ai_rest_permission',
     ]);
 
-    register_rest_route($namespace, '/threads', [
+    register_rest_route($namespace, 'threads', [
         'methods'             => 'GET',
         'callback'            => 'ai_rest_get_threads',
         'permission_callback' => 'ai_rest_permission',
     ]);
 
-    register_rest_route($namespace, '/threads', [
+    register_rest_route($namespace, 'threads', [
         'methods'             => 'POST',
         'callback'            => 'ai_rest_create_thread',
         'permission_callback' => 'ai_rest_permission',
     ]);
 
-    register_rest_route($namespace, '/threads/(?P<id>\d+)', [
+    register_rest_route($namespace, 'threads/(?P<id>\d+)', [
         'methods'             => 'GET',
         'callback'            => 'ai_rest_get_thread',
         'permission_callback' => 'ai_rest_permission',
     ]);
 
-    register_rest_route($namespace, '/threads/(?P<id>\d+)', [
+    register_rest_route($namespace, 'threads/(?P<id>\d+)', [
         'methods'             => 'DELETE',
         'callback'            => 'ai_rest_delete_thread',
         'permission_callback' => 'ai_rest_permission',
     ]);
 
-    register_rest_route($namespace, '/threads/(?P<id>\d+)/send', [
+    register_rest_route($namespace, 'threads/(?P<id>\d+)/send', [
         'methods'             => 'POST',
         'callback'            => 'ai_rest_thread_send',
         'permission_callback' => 'ai_rest_permission',
     ]);
 
-    register_rest_route($namespace, '/logs', [
+    register_rest_route($namespace, 'logs', [
         'methods'             => 'GET',
         'callback'            => 'ai_rest_get_logs',
         'permission_callback' => 'ai_rest_permission',
     ]);
 
-    register_rest_route($namespace, '/logs/stats', [
+    register_rest_route($namespace, 'logs/stats', [
         'methods'             => 'GET',
         'callback'            => 'ai_rest_get_stats',
         'permission_callback' => 'ai_rest_permission',
     ]);
 
-    register_rest_route($namespace, '/settings', [
+    register_rest_route($namespace, 'settings', [
         'methods'             => 'GET',
         'callback'            => 'ai_rest_get_settings',
         'permission_callback' => 'ai_rest_permission',
     ]);
 
-    register_rest_route($namespace, '/settings', [
+    register_rest_route($namespace, 'settings', [
         'methods'             => 'POST',
         'callback'            => 'ai_rest_save_settings',
         'permission_callback' => 'ai_rest_permission',
     ]);
 
-    register_rest_route($namespace, '/models', [
+    register_rest_route($namespace, 'models', [
         'methods'             => 'GET',
         'callback'            => 'ai_rest_get_models',
         'permission_callback' => 'ai_rest_permission',
