@@ -4,6 +4,9 @@
 
 Core AI offers centralized API key management (OpenAI/Anthropic), detailed call logging, usage statistics, and a ready-to-use admin interface that each plugin can integrate wherever preferred: as main menu, submenu, or in WordPress settings.
 
+## Usage
+See the demo here https://github.com/salvatorecorsi/wp-block-auto-fill/
+
 ## Why Core AI?
 
 AI integration in WordPress plugins often requires implementing the same functionality over and over:
@@ -328,3 +331,4 @@ This module is designed to be a solid foundation for AI integration in WordPress
 Pull requests are welcome!
 
 **Core AI** - Making AI integration in WordPress simple, unified, and maintainable.
+
